@@ -26,7 +26,7 @@ with open("hygxyz.csv", "r") as xyzfile:
             bfName = "BF " + row[5]
             starDict[bfName] = (row[17],row[18], row[19])
         else:
-            idName = "Unknown star " + row[0]
+            idName = "Unnamed star " + row[0]
             starDict[idName] = (row[17], row[18], row[19])
 
 
@@ -52,7 +52,7 @@ for key,value in starDict.items():
     if(dist1 <= 10):
         total += 1
         starList.append((key,value))
-#print(starList)
+print(starList)
 print("\n\n\n")
 print("The total number of stars within 10 parsecs of Sol is " + str(total))
 distList = []
@@ -81,7 +81,8 @@ while starList:
         nextStar = min(distList, key = lambda t: t[1])      #get the minimum distance in the list by the second value in the tuple
         #print(distList)
     #print(nextStar)
-    starsTraversalOrder.append((starList[i], nextStar[1]))
+    starsTraversalOrder.append((starList[i], nextStar[1])) #append starList[]
+    #print(starsTraversalOrder)
     starList.remove(starList[i])
     if i < nextStar[0]:
         i = (nextStar[0]-1) #get the index of the next star to get distances for
