@@ -81,7 +81,7 @@ while starList:
         nextStar = min(distList, key = lambda t: t[1])      #get the minimum distance in the list by the second value in the tuple
         #print(distList)
     #print(nextStar)
-    starsTraversalOrder.append((starList[i], nextStar[1])) #append starList[]
+    starsTraversalOrder.append((starList[i], nextStar[1])) #append recently visited star and the distance to the next nearest
     #print(starsTraversalOrder)
     starList.remove(starList[i])
     if i < nextStar[0]:
