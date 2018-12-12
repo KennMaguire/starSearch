@@ -7,7 +7,8 @@ import time
 
 starDict = {}
 
-#function for retrieving distance between two stars
+#https://www.varsitytutors.com/hotmath/hotmath_help/topics/distance-formula-in-3d
+#function for retrieving distance between two stars  https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.sqrt.html
 def getDist(_x1, _y1, _z1, _x2, _y2, _z2):
     dist = np.sqrt(((_x2-_x1)**2)+ ((_y2-_y1)**2) + ((_z2-_z1)**2))
     return dist
